@@ -31,7 +31,7 @@ public class FileUtils {
 		    return files;
 	}
 
-	public static void writeToFile(String nomFic, String texte) {
+	public static void writeToFile(String nomFic, String texte, boolean appendMode) {
 		// on va chercher le chemin et le nom du fichier et on me tout ca dans
 		// un String
 		String adressedufichier = System.getProperty("user.dir") + "/" + nomFic;
@@ -43,7 +43,7 @@ public class FileUtils {
 			 * donne comme argument le nom du fichier true signifie qu on ajoute
 			 * dans le fichier (append), on ne marque pas par dessus
 			 */
-			FileWriter fw = new FileWriter(adressedufichier, false);
+			FileWriter fw = new FileWriter(adressedufichier, appendMode);
 
 			// le BufferedWriter output auquel on donne comme argument le
 			// FileWriter fw cree juste au dessus

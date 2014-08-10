@@ -2,7 +2,13 @@ package net.franckbenault.migration.dbunittodbsetup;
 
 public class DBUnitToDbSetup {
 	
-	public void migration(String inputFolder, String outputFile) {
+	/**
+	 * 
+	 * @param inputFolder
+	 * @param outputFile
+	 * @return (int) return code O for ok process
+	 */
+	public int migration(String inputFolder, String outputFile) {
 		
 		
 		
@@ -14,7 +20,8 @@ public class DBUnitToDbSetup {
 			//data part
 		
 		
-		FileUtils.writeToFile(outputFile, "texte");
+		FileUtils.writeToFile(outputFile, "texte", false);
+		return 0;
 	}
 
 }
