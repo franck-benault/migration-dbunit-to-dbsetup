@@ -28,11 +28,28 @@ public class FileUtilsTest {
 	@After
 	public void tearDown() throws Exception {
 	}
+	
+	private void deleteFile(String filePathString) {
+		File file = new File(filePathString); 
+		file.delete();
+	}
+	
+	private void checkFileExist(String filePathString) {
+		File f = new File(filePathString);
+		if(!f.exists() || f.isDirectory()) { 
+			fail("file not found");
+		}
+	}
 
 	@Test
 	public void testWriteToFile() {
 		//how to check the content of a file ?
-		FileUtils.writeToFile("target/myFile.txt", "texte",false);
+		String filePathString = "target/myFile.txt";
+		deleteFile(filePathString);
+		
+		FileUtils.writeToFile(filePathString, "texte",false);
+		
+		checkFileExist(filePathString);
 	}
 	
 	@Test
