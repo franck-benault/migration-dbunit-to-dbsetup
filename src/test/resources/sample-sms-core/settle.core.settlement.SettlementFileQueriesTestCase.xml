@@ -1,0 +1,75 @@
+<dataset>
+	<table name="SETTLE_SETTLEMENT_FILES">
+		<column>ID_SETTLEFILE</column>
+		<column>ACQ_SYS_ALIAS</column>
+		<column>FILE_ALIAS</column>
+		<column>MERCHANT_PROFILE</column>
+		<column>NETWORK_ALIAS</column>
+		<column>OFFER</column>
+		<column>TECHNO</column>
+		<column>NO_OF_SETTLE_MOVEMENT</column>
+		<column>STATUS</column>
+		<column>END_DATE_TIME</column>		
+		<column>EXECUTION_MODE</column>
+		<column>SESSION_ID</column>
+		<row>
+			<value>1000</value>
+			<value>CTC1</value>
+			<value>CAPTURE_SIPS</value>
+			<value>1D</value>
+			<value>CB</value>
+			<value>SIPS</value>
+			<value>SSL</value>
+			<value>0</value>
+			<value>FILE_CREATED</value>
+			<null/>
+			<value>PRODUCTION</value>
+			<null/>
+		</row>
+		<row>
+			<value>1001</value>
+			<value>CTC2</value>
+			<value>CAPTURE_SIPS</value>
+			<value>1D</value>
+			<value>CB</value>
+			<value>SIPS</value>
+			<value>SSL</value>
+			<value>0</value>
+			<value>ENDED</value>
+			<value>2012-07-08 15:05:00</value>
+			<value>PRODUCTION</value>
+			<null/>
+		</row>
+		<row>
+			<value>1002</value>
+			<value>CTC3</value>
+			<value>CAPTURE_SIPS</value>
+			<value>1D</value>
+			<value>CB</value>
+			<value>SIPS</value>
+			<value>SSL</value>
+			<value>3</value>
+			<value>ENDED</value>
+			<value>2012-07-08 15:05:00</value>
+			<value>PRODUCTION</value>
+			<null/>
+		</row>
+		<row>
+			<value>1003</value>
+			<value>CTC2</value>
+			<null/>
+			<null/>
+			<value>PAYON</value>
+			<null/>
+			<null/>
+			<value>3</value>
+			<value>FILE_CREATED</value>
+			<value>2012-07-08 15:05:00</value>
+			<value>PRODUCTION</value>
+			<value>S_1</value>
+		</row>
+	</table>
+
+	<table name="SETTLE_OPERATIONS"/>
+	<table name="SETTLE_SETTLEMENT_MOVEMENTS"/>
+</dataset>

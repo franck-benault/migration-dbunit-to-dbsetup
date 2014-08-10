@@ -11,7 +11,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class FileUtilsTest {
+public class FileUtilsTest extends AbstractTester {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -29,17 +29,7 @@ public class FileUtilsTest {
 	public void tearDown() throws Exception {
 	}
 	
-	private void deleteFile(String filePathString) {
-		File file = new File(filePathString); 
-		file.delete();
-	}
-	
-	private void checkFileExist(String filePathString) {
-		File f = new File(filePathString);
-		if(!f.exists() || f.isDirectory()) { 
-			fail("file not found");
-		}
-	}
+
 
 	@Test
 	public void testWriteToFile() {

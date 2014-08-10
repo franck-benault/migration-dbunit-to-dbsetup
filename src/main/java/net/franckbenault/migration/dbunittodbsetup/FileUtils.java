@@ -59,10 +59,9 @@ public class FileUtils {
 			// methode pour le BufferedWriter
 
 			output.close();
-			// et on le ferme
-			System.out.println("fichier créé");
+
 		} catch (IOException ioe) {
-			System.out.print("Erreur : ");
+			System.out.print("Error: ");
 			ioe.printStackTrace();
 		}
 	}

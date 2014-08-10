@@ -1,0 +1,28 @@
+<dataset>
+	<table name="SETTLE_SETTLEMENT_FILES">
+		<column>ID_SETTLEFILE</column>
+		<column>ACQ_SYS_ALIAS</column>
+		<column>NETWORK_ALIAS</column>
+		<column>NO_OF_SETTLE_MOVEMENT</column>
+		<column>STATUS</column>
+		<column>EXECUTION_MODE</column>
+		<row>
+			<value>1001</value>
+			<value>PAYON</value>
+			<value>PAYON</value>
+			<value>10</value>
+			<value>STARTED</value>
+			<value>PRODUCTION</value>
+		</row>
+		<row>
+			<value>1002</value>
+			<value>OTHER</value>
+			<value>OTHER</value>
+			<value>10</value>
+			<value>STARTED</value>
+			<value>PRODUCTION</value>
+		</row>
+	</table>
+	<table name="SETTLE_OPERATIONS" />
+	<table name="SETTLE_SETTLEMENT_MOVEMENTS" />
+</dataset>

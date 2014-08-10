@@ -1,0 +1,29 @@
+<dataset>
+	<table name="SETTLE_SETTLEMENT_FILES">
+		<column>ID_SETTLEFILE</column>
+		<column>ACQ_SYS_ALIAS</column>
+		<column>FILE_ALIAS</column>
+		<column>MERCHANT_PROFILE</column>
+		<column>NETWORK_ALIAS</column>
+		<column>OFFER</column>
+		<column>TECHNO</column>
+		<column>NO_OF_SETTLE_MOVEMENT</column>
+		<column>STATUS</column>
+		<column>EXECUTION_MODE</column>
+		<row>
+			<value>SF01</value>
+			<value>CTC1</value>
+			<value>CAPTURE_SIPS</value>
+			<value>1D</value>
+			<value>cb</value>
+			<value>SIPS</value>
+			<value>SSL</value>
+			<value>0</value>
+			<value>FILE_CREATED</value>
+			<value>PRODUCTION</value>
+		</row>		
+	</table>
+	<table name="SETTLE_OPERATIONS"/>
+	<table name="SETTLE_SETTLEMENT_MOVEMENTS" />	
+	<table name="SETTLE_CONTRACTS" />
+</dataset>

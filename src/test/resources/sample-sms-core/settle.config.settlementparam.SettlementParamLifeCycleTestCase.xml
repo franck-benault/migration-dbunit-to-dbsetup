@@ -1,0 +1,43 @@
+<dataset>
+	<table name="SETTLE_CONTRACTS">
+		<column>ID_CONTRACT</column>
+		<column>NETWORK_ALIAS</column>
+		<column>TECHNO</column>
+		<row>
+			<value>id1</value>
+			<value>CB</value>
+			<value>NO</value>
+		</row>
+		<row>
+			<value>id2</value>
+			<value>CB</value>
+			<value>NO</value>
+		</row>
+		<row>
+			<value>id11</value>
+			<value>CB</value>
+			<value>DCC</value>
+		</row>
+	</table>
+	<table name="SETTLE_SETTLEMENT_PARAMETERS" >
+		<column>ID_SETTLEPARM</column>
+		<column>NETWORK_ALIAS</column>
+		<column>TECHNO</column>
+		<row>
+			<value>id1</value>
+			<value>CB</value>
+			<value>NO</value>
+		</row>
+		<row>
+			<value>id2</value>
+			<value>CB</value>
+			<value>NO</value>
+		</row>
+		<row>
+			<value>id11</value>
+			<value>CB</value>
+			<value>DCC</value>
+		</row>
+	</table>
+
+</dataset>

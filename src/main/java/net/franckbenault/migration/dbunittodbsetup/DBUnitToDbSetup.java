@@ -25,7 +25,7 @@ public class DBUnitToDbSetup {
 		
 		//read folder list of xml files
 	    String operation = "\tpublic static final Operation insertVendorsAndProducts%s =\n \tsequenceOf();\n\n";
-		List<File> files = FileUtils.listOfFiles("./src/test/resources");
+		List<File> files = FileUtils.listOfFiles(inputFolder);
 		
 		int counter =0;
 		for(File file : files) {

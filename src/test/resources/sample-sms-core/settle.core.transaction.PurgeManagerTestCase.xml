@@ -1,0 +1,299 @@
+<dataset>
+	<table name="SETTLE_SETTLEMENT_FILES">
+		<column>ID_SETTLEFILE</column>
+		<column>ACQ_SYS_ALIAS</column>
+		<column>FILE_ALIAS</column>
+		<column>MERCHANT_PROFILE</column>
+		<column>END_DATE_TIME</column>
+		<column>NETWORK_ALIAS</column>
+		<column>OFFER</column>
+		<column>TECHNO</column>
+		<column>NO_OF_SETTLE_MOVEMENT</column>
+		<column>STATUS</column>
+		<column>EXECUTION_MODE</column>
+		<row>
+			<value>1</value>
+			<value>CTC1</value>
+			<value>CAPTURE_SIPS</value>
+			<value>1D</value>
+			<value>2012-07-08 15:05:00</value>
+			<value>CB</value>
+			<value>SIPS</value>
+			<value>SSL</value>
+			<value>0</value>
+			<value>FILE_CREATED</value>
+			<value>PRODUCTION</value>
+		</row>
+		<row>
+			<value>2</value>
+			<value>CTC2</value>
+			<value>CAPTURE_SIPS</value>
+			<value>1D</value>
+			<value>2012-07-08 15:05:00</value>
+			<value>CB</value>
+			<value>SIPS</value>
+			<value>SSL</value>
+			<value>0</value>
+			<value>ENDED</value>
+			<value>PRODUCTION</value>
+		</row>
+		<row>
+			<value>3</value>
+			<value>CTC3</value>
+			<value>CAPTURE_SIPS</value>
+			<value>1D</value>
+			<value>2048-11-30 15:05:00</value>
+			<value>CB</value>
+			<value>SIPS</value>
+			<value>SSL</value>
+			<value>3</value>
+			<value>ENDED</value>
+			<value>PRODUCTION</value>
+		</row>
+	</table>
+	
+	<table name="SETTLE_OPERATIONS">
+		<column>ID_OPERATION</column>
+		<column>TRANSACTION_ID</column>
+		<column>MERCHANT_ID</column>
+		<column>MERCHANT_COUNTRY</column>
+		<column>NETWORK_ALIAS</column>
+		<column>NETWORK_ID</column>
+		<column>STATUS</column>
+		<column>AUTHOR_COUNT</column>
+		<column>CASH_AMOUNT_VALUE</column>
+		<column>CONSUMER_CREDITAMOUNT_VALUE</column>
+		<column>OPER_AMOUNT_VALUE</column>
+		<column>OVERTAKE_AMOUNT_VALUE</column>
+		<column>CVV_FLAG</column>
+		<column>ORIGIN_AMOUNT_VALUE</column>
+		<column>PAYMENT_NB</column>
+		<column>KEY_SIPS</column>
+		<column>DUEDATE_NUM</column>
+		<column>ITEM_OPERATION</column>
+		<column>REFITEM_OPERATION</column>
+		<column>PAYMENT_SEQ</column>
+		<column>CURRENT_TRANSAMOUNT_VALUE</column>
+		<column>dateNum</column>
+		<column>CAPTURE_LIMIT_DATE</column>
+		<column>OPP_REF</column>		
+		<row>
+			<value>1</value>
+			<value>tnxId1</value>
+			<value>merchantId1</value>
+			<value>FR</value>
+			<value>CB</value>
+			<value>CB</value>
+			<value>TO_CAPTURE</value>
+			<!--  -->
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>100</value>
+			<value>20060601</value>
+			<value>2012-07-26 15:05:00</value>
+			<value>opp</value>
+		</row>
+		
+		<row>
+			<value>2</value>
+			<value>tnxId5</value>
+			<value>merchantId55555</value>
+			<value>F5</value>
+			<value>CB</value>
+			<value>CB</value>
+			<value>TO_CAPTURE</value>
+			<!--  -->
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>100</value>
+			<value>20060601</value>
+			<value>2012-07-26 15:05:00</value>
+			<value>opp</value>
+		</row>
+		
+		<row>
+			<value>3</value>
+			<value>tnxId6</value>
+			<value>merchantId66666</value>
+			<value>F6</value>
+			<value>CB</value>
+			<value>CB</value>
+			<value>TO_CAPTURE</value>
+			<!--  -->
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>100</value>
+			<value>20060601</value>
+			<value>2012-07-26 15:05:00</value>
+			<value>opp</value>
+		</row>
+		
+		
+		<row>
+			<value>4</value>
+			<value>tnxId7</value>
+			<value>merchantId77777</value>
+			<value>F7</value>
+			<value>CB</value>
+			<value>CB</value>
+			<value>TO_CREDIT</value>
+			<!--  -->
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>20</value>
+			<value>20060601</value>
+			<value>2012-07-26 15:05:00</value>
+			<value>opp</value>
+		</row>
+		<row>
+			<value>5</value>
+			<value>tnxId8</value>
+			<value>merchantId88888</value>
+			<value>F8</value>
+			<value>CB</value>
+			<value>CB</value>
+			<value>TO_CAPTURE</value>
+			<!--  -->
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>20</value>
+			<value>20060601</value>
+			<value>2012-07-26 15:05:00</value>
+			<value>opp</value>
+		</row>
+		<row>
+			<value>6</value>
+			<value>tnxId9</value>
+			<value>merchantId99999</value>
+			<value>F9</value>
+			<value>CB</value>
+			<value>CB</value>
+			<value>TO_CAPTURE</value>
+			<!--  -->
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>20</value>
+			<value>20060601</value>
+			<value>2012-07-26 15:05:00</value>
+			<value>opp</value>
+		</row>
+	</table>
+	
+	<table name="SETTLE_SETTLEMENT_MOVEMENTS">
+		<column>ID_SETTLEMVT</column>
+		<column>SETTLEMENT_STATUS</column>
+		<column>ID_SETTLEFILE</column>
+		<column>ID_OPERATION</column>
+		<row>
+			<value>1</value>
+			<value>TO_SETTLE</value>
+			<value>1</value>
+			<value>1</value>
+		</row>
+		
+		<row>
+			<value>2</value>
+			<value>SETTLE_OK</value>
+			<value>2</value>
+			<value>2</value>
+		</row>
+		
+		<row>
+			<value>3</value>
+			<value>SETTLE_OK</value>
+			<value>2</value>
+			<value>3</value>
+		</row>
+		
+				
+		<row>
+			<value>4</value>
+			<value>SETTLE_OK</value>
+			<value>3</value>
+			<value>4</value>
+		</row>
+		
+		
+		<row>
+			<value>5</value>
+			<value>TO_SETTLE</value>
+			<value>1</value>
+			<value>5</value>
+		</row>
+		
+		<row>
+			<value>6</value>
+			<value>SETTLE_OK</value>
+			<value>3</value>
+			<value>6</value>
+		</row>
+	</table>
+	
+	
+</dataset>

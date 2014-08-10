@@ -1,0 +1,37 @@
+<dataset>
+	<table name="SETTLE_ACQUIRERS">
+		<column>ID_ACQUIRER</column>
+		<column>ACQ_SYS_ALIAS</column>
+		<column>ACQ_COMMENT</column>
+		<row>
+			<value>00</value>
+			<value>PAYON</value>
+			<value>PayOn Acquirer for Visa Mastercard</value>
+		</row>
+		<row>
+			<value>01</value>
+			<value>PMPFC</value>
+			<value>PayOn Acquirer for Post Finance</value>
+		</row>
+	</table>
+	<table name="SETTLE_SETTLEMENT_FILES">
+		<column>ID_SETTLEFILE</column>
+		<column>ACQ_SYS_ALIAS</column>
+		<column>NETWORK_ALIAS</column>
+		<column>NO_OF_SETTLE_MOVEMENT</column>
+		<column>STATUS</column>
+		<column>EXECUTION_MODE</column>
+		<row>
+			<value>1001</value>
+			<value>PMPFC</value>
+			<value>pmpfc</value>
+			<value>0</value>
+			<value>FILE_CREATED</value>
+			<value>PRODUCTION</value>
+		</row>
+	</table>
+	<table name="SETTLE_OPERATIONS"></table>
+	<table name="SETTLE_SETTLEMENT_MOVEMENTS"></table>
+	<table name="SETTLE_SETTLEMENT_PARAMETERS" />	
+	<table name="SETTLE_CONTRACTS" />
+</dataset>

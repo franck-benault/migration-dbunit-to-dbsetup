@@ -1,0 +1,93 @@
+<dataset>
+	<table name="SETTLE_ACQUIRERS">
+		<column>ID_ACQUIRER</column>
+		<column>ACQ_SYS_ALIAS</column>
+		<column>ACQ_COMMENT</column>
+		<row>
+			<value>00</value>
+			<value>CTC0</value>
+			<value>ctc merchant</value>
+		</row>
+		<row>
+			<value>01</value>
+			<value>CTC1</value>
+			<value>ctc1 atos</value>
+		</row>
+		<row>
+			<value>10</value>
+			<value>FEXCO</value>
+			<value>Fexco</value>
+		</row>
+		<row>
+			<value>23</value>
+			<value>FINAREF</value>
+			<value>finaref</value>
+		</row>
+		<row>
+			<value>27</value>
+			<value>NATWEST</value>
+			<value>natwest</value>
+		</row>
+		<row>
+			<value>63</value>
+			<value>BANKSYS</value>
+			<value>Banksys</value>
+		</row>
+		<row>
+			<value>87</value>
+			<value>INDIA</value>
+			<value>AWL India</value>
+		</row>
+		<row>
+			<value>88</value>
+			<value>AMEX</value>
+			<value>AWL Amex</value>
+		</row>
+		<row>
+			<value>29</value>
+			<value>S2P</value>
+			<value>s2p</value>
+		</row>
+		<row>
+			<value>20</value>
+			<value>FRANFINANCE</value>
+			<value>franfinance</value>
+		</row>
+		<row>
+			<value>12</value>
+			<value>DINERS</value>
+			<value>ctc Diners</value>
+		</row>
+		<row>
+			<value>28</value>
+			<value>COFINOGA</value>
+			<value>cofinoga</value>
+		</row>
+		<row>
+			<value>26</value>
+			<value>EXPERIAN</value>
+			<value>credipar</value>
+		</row>
+		<row>
+			<value>PA</value>
+			<value>PAYON</value>
+			<value>payon online</value>
+		</row>
+		<row>
+			<value>33</value>
+			<value>COFIDIS</value>
+			<value>cofidis</value>
+		</row>
+		<row>
+			<value>60</value>
+			<value>IPS</value>
+			<value>ips</value>
+		</row>
+	</table>
+	<table name="SETTLE_CONTRACTS" />
+	<table name="SETTLE_SETTLEMENT_PARAMETERS" />
+	
+	<table name="SETTLE_SETTLEMENT_FILES" />
+	<table name="SETTLE_OPERATIONS" />
+	<table name="SETTLE_SETTLEMENT_MOVEMENTS" />
+</dataset>

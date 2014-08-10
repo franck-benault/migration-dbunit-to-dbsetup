@@ -1,0 +1,5 @@
+<dataset>
+	<table name="SETTLE_ACQUIRERS" />
+	<table name="SETTLE_SETTLEMENT_PARAMETERS" />
+	<table name="SETTLE_CONTRACTS" />
+</dataset>

@@ -29,7 +29,7 @@ public class DBUnitToDbSetupTest {
 	@Test
 	public void testMigration() {
 		DBUnitToDbSetup migration = new DBUnitToDbSetup();
-		int res = migration.migration(null, "target/myFile.txt");
+		int res = migration.migration("./src/test/resources/sample-sms-core", "target/myFile.txt");
 		assertTrue(res==0);
 	}
 
