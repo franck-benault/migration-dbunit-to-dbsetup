@@ -1,0 +1,13 @@
+<dataset>
+	<table name="SETTLE_ACQUIRERS">
+		<column>ID_ACQUIRER</column>
+		<column>ACQ_SYS_ALIAS</column>
+		<column>ACQ_COMMENT</column>
+		<row>
+			<value>00</value>
+			<value>CTC0</value>
+			<value>ctc merchant</value>
+		</row>
+	</table>
+	<table name ="USERS" />
+</dataset>

@@ -1,6 +1,7 @@
 package net.franckbenault.migration.dbunittodbsetup.xml;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -9,6 +10,38 @@ import org.jdom2.input.SAXBuilder;
 
 public class XmlReader {
 
+	
+	public static List<String> getTablesNames(String pathFileName) {
+		
+		List<String> output = new ArrayList<String>();
+		
+		SAXBuilder sxb = new SAXBuilder();
+		try {
+			// On crée un nouveau document JDOM avec en argument le fichier XML
+			// Le parsing est terminé ;)
+			document = sxb.build(new File(pathFileName));
+		} catch (Exception e) {
+		}
+
+		// On initialise un nouvel élément racine avec l'élément racine du
+		// document.
+		racine = document.getRootElement();
+		List<Element> listTables = racine.getChildren("table");
+
+		// On crée un Iterator sur notre liste
+		Iterator<Element> i = listTables.iterator();
+		while (i.hasNext()) {
+			// On recrée l'Element courant à chaque tour de boucle afin de
+			// pouvoir utiliser les méthodes propres aux Element comme :
+			// sélectionner un nœud fils, modifier du texte, etc...
+			Element courant = i.next();
+			
+			output.add(courant.getAttributeValue("name"));
+		}
+		return output;
+		
+	}
+	
 	static org.jdom2.Document document;
 	static Element racine;
 
@@ -18,7 +51,7 @@ public class XmlReader {
 		try {
 			// On crée un nouveau document JDOM avec en argument le fichier XML
 			// Le parsing est terminé ;)
-			document = sxb.build(new File("Exercice2.xml"));
+			document = sxb.build(new File("./src/test/resources/file1.xml"));
 		} catch (Exception e) {
 		}
 
@@ -33,17 +66,18 @@ public class XmlReader {
 	static void afficheALL() {
 		// On crée une List contenant tous les noeuds "etudiant" de l'Element
 		// racine
-		List listEtudiants = racine.getChildren("etudiant");
+		List listTables = racine.getChildren("table");
 
 		// On crée un Iterator sur notre liste
-		Iterator i = listEtudiants.iterator();
+		Iterator i = listTables.iterator();
 		while (i.hasNext()) {
 			// On recrée l'Element courant à chaque tour de boucle afin de
 			// pouvoir utiliser les méthodes propres aux Element comme :
 			// sélectionner un nœud fils, modifier du texte, etc...
 			Element courant = (Element) i.next();
+			System.out.println(courant.toString());
 			// On affiche le nom de l’élément courant
-			System.out.println(courant.getChild("nom").getText());
+			System.out.println(courant.getAttributeValue("name"));
 		}
 	}
 }
