@@ -1,10 +1,32 @@
 package net.franckbenault.migration.dbunittodbsetup;
 
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.List;
 
 public class FileUtils {
+	
+	
+	/**
+	 * 
+	 * @param folderName
+	 * @return
+	 */
+	public static List<String> listOfFiles(String folderName) {
+
+		File folder = new File(folderName);
+		
+		
+		    for (final File fileEntry : folder.listFiles()) {
+		        if (!fileEntry.isDirectory()) {
+		            System.out.println(fileEntry.getName());
+		        }
+		    }
+	
+		    return null;
+	}
 
 	public static void writeToFile(String nomFic, String texte) {
 		// on va chercher le chemin et le nom du fichier et on me tout ca dans

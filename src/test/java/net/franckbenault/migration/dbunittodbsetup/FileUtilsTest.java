@@ -30,5 +30,10 @@ public class FileUtilsTest {
 	public void testWriteToFile() {
 		FileUtils.writeToFile("target/myFile.txt", "texte");
 	}
+	
+	@Test
+	public void testListOfFiles() {
+		FileUtils.listOfFiles("./src/test/resources");
+	}
 
 }
