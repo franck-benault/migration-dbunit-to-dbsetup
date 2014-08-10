@@ -17,30 +17,44 @@ public class XmlReader {
 		
 		SAXBuilder sxb = new SAXBuilder();
 		try {
-			// On crée un nouveau document JDOM avec en argument le fichier XML
-			// Le parsing est terminé ;)
 			document = sxb.build(new File(pathFileName));
 		} catch (Exception e) {
 		}
 
-		// On initialise un nouvel élément racine avec l'élément racine du
-		// document.
 		racine = document.getRootElement();
 		List<Element> listTables = racine.getChildren("table");
-
-		// On crée un Iterator sur notre liste
-		Iterator<Element> i = listTables.iterator();
-		while (i.hasNext()) {
-			// On recrée l'Element courant à chaque tour de boucle afin de
-			// pouvoir utiliser les méthodes propres aux Element comme :
-			// sélectionner un nœud fils, modifier du texte, etc...
-			Element courant = i.next();
+		for (Element courant : listTables) {
 			
 			output.add(courant.getAttributeValue("name"));
 		}
 		return output;
 		
 	}
+	
+	public static List<String> getTableColumns(String tableName, String pathFileName) {
+		
+		List<String> output = new ArrayList<String>();
+		
+		SAXBuilder sxb = new SAXBuilder();
+		try {
+			document = sxb.build(new File(pathFileName));
+		} catch (Exception e) {
+		}
+
+		racine = document.getRootElement();
+		List<Element> listTables = racine.getChildren("table");
+
+		for (Element courant : listTables) {
+			if(courant.getAttributeValue("name").equals(tableName)) {
+				List<Element> columns = courant.getChildren("columns");
+				
+			}
+		}
+		return output;
+		
+	}
+	
+	
 	
 	static org.jdom2.Document document;
 	static Element racine;
