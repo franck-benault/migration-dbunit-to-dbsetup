@@ -16,12 +16,13 @@ public class XmlReader {
 		List<String> output = new ArrayList<String>();
 		
 		SAXBuilder sxb = new SAXBuilder();
+		org.jdom2.Document document = null;
 		try {
 			document = sxb.build(new File(pathFileName));
 		} catch (Exception e) {
 		}
 
-		racine = document.getRootElement();
+		Element racine = document.getRootElement();
 		List<Element> listTables = racine.getChildren("table");
 		for (Element courant : listTables) {
 			
@@ -36,18 +37,19 @@ public class XmlReader {
 		List<String> output = new ArrayList<String>();
 		
 		SAXBuilder sxb = new SAXBuilder();
+		org.jdom2.Document document = null;
 		try {
 			document = sxb.build(new File(pathFileName));
 		} catch (Exception e) {
 		}
 
-		racine = document.getRootElement();
+		Element racine = document.getRootElement();
 		List<Element> listTables = racine.getChildren("table");
 
 		for (Element courant : listTables) {
 			if(courant.getAttributeValue("name").equals(tableName)) {
 				List<Element> columns = courant.getChildren("column");
-				System.out.println(columns.size());
+				//System.out.println(columns.size());
 				for(Element column : columns) {
 					output.add(column.getValue());
 				}
@@ -57,44 +59,39 @@ public class XmlReader {
 		
 	}
 	
-	
-	
-	static org.jdom2.Document document;
-	static Element racine;
 
-	public static void main(String[] args) {
-		// On crée une instance de SAXBuilder
+	public static List<List<String>> getTableRowValues(String tableName, String pathFileName) {
+		
+		List<List<String>> output = new ArrayList<List<String>>();
+		
 		SAXBuilder sxb = new SAXBuilder();
+		org.jdom2.Document document = null;
 		try {
-			// On crée un nouveau document JDOM avec en argument le fichier XML
-			// Le parsing est terminé ;)
-			document = sxb.build(new File("./src/test/resources/file1.xml"));
+			document = sxb.build(new File(pathFileName));
 		} catch (Exception e) {
 		}
 
-		// On initialise un nouvel élément racine avec l'élément racine du
-		// document.
-		racine = document.getRootElement();
+		Element racine = document.getRootElement();
+		List<Element> listTables = racine.getChildren("table");
 
-		// Méthode définie dans la partie 3.2. de cet article
-		afficheALL();
-	}
-
-	static void afficheALL() {
-		// On crée une List contenant tous les noeuds "etudiant" de l'Element
-		// racine
-		List listTables = racine.getChildren("table");
-
-		// On crée un Iterator sur notre liste
-		Iterator i = listTables.iterator();
-		while (i.hasNext()) {
-			// On recrée l'Element courant à chaque tour de boucle afin de
-			// pouvoir utiliser les méthodes propres aux Element comme :
-			// sélectionner un nœud fils, modifier du texte, etc...
-			Element courant = (Element) i.next();
-			System.out.println(courant.toString());
-			// On affiche le nom de l’élément courant
-			System.out.println(courant.getAttributeValue("name"));
+		for (Element courant : listTables) {
+			if(courant.getAttributeValue("name").equals(tableName)) {
+				List<Element> rows = courant.getChildren("row");
+				//System.out.println(columns.size());
+				for(Element row : rows) {
+					List<Element> values = row.getChildren("value");
+					List<String> listValues = new ArrayList<String>();
+					for(Element value: values) {
+						listValues.add(value.getValue());
+					}
+					output.add(listValues);
+				}
+			}
 		}
+		return output;
+		
 	}
+	
+	//static org.jdom2.Document document;
+	//static Element racine;
 }
