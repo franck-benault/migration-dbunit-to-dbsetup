@@ -4,6 +4,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class FileUtils {
@@ -14,18 +15,20 @@ public class FileUtils {
 	 * @param folderName
 	 * @return
 	 */
-	public static List<String> listOfFiles(String folderName) {
+	public static List<File> listOfFiles(String folderName) {
 
+		List<File> files = new ArrayList<File>();
 		File folder = new File(folderName);
 		
 		
 		    for (final File fileEntry : folder.listFiles()) {
 		        if (!fileEntry.isDirectory()) {
 		            System.out.println(fileEntry.getName());
+		            files.add(fileEntry);
 		        }
 		    }
 	
-		    return null;
+		    return files;
 	}
 
 	public static void writeToFile(String nomFic, String texte) {

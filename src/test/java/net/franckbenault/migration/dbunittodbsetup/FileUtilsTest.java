@@ -2,6 +2,9 @@ package net.franckbenault.migration.dbunittodbsetup;
 
 import static org.junit.Assert.*;
 
+import java.io.File;
+import java.util.List;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -28,12 +31,16 @@ public class FileUtilsTest {
 
 	@Test
 	public void testWriteToFile() {
+		//how to check the content of a file ?
 		FileUtils.writeToFile("target/myFile.txt", "texte");
 	}
 	
 	@Test
 	public void testListOfFiles() {
-		FileUtils.listOfFiles("./src/test/resources");
+		List<File> res =FileUtils.listOfFiles("./src/test/resources");
+		assertNotNull(res);
+		assertEquals(res.size(),3);
+		
 	}
 
 }
