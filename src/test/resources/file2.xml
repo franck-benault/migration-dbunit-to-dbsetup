@@ -9,5 +9,16 @@
 			<value>ctc merchant</value>
 		</row>
 	</table>
-	<table name ="USERS" />
+	<table name ="USERS" >
+		<column>ID_USER</column>
+		<column>NAME</column>
+		<row>
+			<value>01</value>
+			<value>user1</value>
+		</row>
+		<row>
+			<value>02</value>
+			<value>user2</value>
+		</row>
+	</table>
 </dataset>

@@ -46,8 +46,11 @@ public class XmlReader {
 
 		for (Element courant : listTables) {
 			if(courant.getAttributeValue("name").equals(tableName)) {
-				List<Element> columns = courant.getChildren("columns");
-				
+				List<Element> columns = courant.getChildren("column");
+				System.out.println(columns.size());
+				for(Element column : columns) {
+					output.add(column.getValue());
+				}
 			}
 		}
 		return output;

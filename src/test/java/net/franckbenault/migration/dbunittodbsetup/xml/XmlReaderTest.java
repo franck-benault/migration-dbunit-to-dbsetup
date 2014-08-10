@@ -42,5 +42,21 @@ public class XmlReaderTest {
 		assertEquals(res.size(),2);
 		assertTrue(res.contains("USERS"));
 	}
+	
+	
+	@Test
+	public void testGetColumns_file1() {
+		List<String> res =XmlReader.getTableColumns("SETTLE_ACQUIRERS", "./src/test/resources/file1.xml");
+		assertNotNull(res);
+		assertEquals(res.size(),3);
+		assertTrue(res.contains("ACQ_COMMENT"));
+	}
 
+	@Test
+	public void testGetColumns_file2() {
+		List<String> res =XmlReader.getTableColumns("USERS", "./src/test/resources/file2.xml");
+		assertNotNull(res);
+		assertEquals(res.size(),2);
+		assertTrue(res.contains("NAME"));
+	}
 }
