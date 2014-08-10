@@ -27,9 +27,16 @@ public class DBUnitToDbSetupTest {
 	}
 
 	@Test
-	public void testMigration() {
+	public void testMigration_core() {
 		DBUnitToDbSetup migration = new DBUnitToDbSetup();
-		int res = migration.migration("./src/test/resources/sample-sms-core", "target/myFile.txt");
+		int res = migration.migration("./src/test/resources/sample-sms-core", "target/sms-core.txt");
+		assertTrue(res==0);
+	}
+	
+	@Test
+	public void testMigration_batch() {
+		DBUnitToDbSetup migration = new DBUnitToDbSetup();
+		int res = migration.migration("./src/test/resources/sample-sms-batch", "target/sms-batch.txt");
 		assertTrue(res==0);
 	}
 
