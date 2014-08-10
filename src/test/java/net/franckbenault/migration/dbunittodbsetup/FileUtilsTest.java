@@ -49,5 +49,13 @@ public class FileUtilsTest extends AbstractTester {
 		assertEquals(res.size(),3);
 		
 	}
+	
+	@Test
+	public void testListOfXMLFiles() {
+		List<File> res =FileUtils.listOfXMLFiles("./src/test/resources");
+		assertNotNull(res);
+		assertEquals(res.size(),2);
+		
+	}
 
 }

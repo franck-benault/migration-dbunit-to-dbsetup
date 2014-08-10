@@ -24,13 +24,11 @@ public class DBUnitToDbSetup {
 		FileUtils.writeToFile(outputFile, header, true);
 		
 		//read folder list of xml files
-	    String operation = "\tpublic static final Operation insertVendorsAndProducts%s =\n \tsequenceOf();\n\n";
-		List<File> files = FileUtils.listOfFiles(inputFolder);
+	    String operation = "\tpublic static final Operation %s =\n \tsequenceOf();\n\n";
+		List<File> files = FileUtils.listOfXMLFiles(inputFolder);
 		
-		int counter =0;
 		for(File file : files) {
-			counter++;
-			FileUtils.writeToFile(outputFile,String.format(operation,counter), true);			
+			FileUtils.writeToFile(outputFile,String.format(operation,getOperationName(file.getName())), true);			
 		}
 		
 		//FOOTER
@@ -39,6 +37,11 @@ public class DBUnitToDbSetup {
 
 	
 		return 0;
+	}
+	
+	public String getOperationName(String xmlFileName) {
+		
+		return StringUtils.removePointAddProperCase(xmlFileName);
 	}
 
 }

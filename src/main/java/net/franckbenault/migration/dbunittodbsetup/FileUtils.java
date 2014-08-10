@@ -8,8 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FileUtils {
-	
-	
+
 	/**
 	 * 
 	 * @param folderName
@@ -19,19 +18,33 @@ public class FileUtils {
 
 		List<File> files = new ArrayList<File>();
 		File folder = new File(folderName);
-		
-		
-		    for (final File fileEntry : folder.listFiles()) {
-		        if (!fileEntry.isDirectory()) {
-		            System.out.println(fileEntry.getName());
-		            files.add(fileEntry);
-		        }
-		    }
-	
-		    return files;
+
+		for (final File fileEntry : folder.listFiles()) {
+			if (!fileEntry.isDirectory()) {
+				System.out.println(fileEntry.getName());
+				files.add(fileEntry);
+			}
+		}
+
+		return files;
 	}
 
-	public static void writeToFile(String nomFic, String texte, boolean appendMode) {
+	public static List<File> listOfXMLFiles(String folderName) {
+
+		List<File> files = new ArrayList<File>();
+
+		List<File> filesAll = listOfFiles(folderName);
+		for (final File fileEntry : filesAll) {
+			if (fileEntry.getName().endsWith(".xml")) {
+				files.add(fileEntry);
+			}
+		}
+
+		return files;
+	}
+
+	public static void writeToFile(String nomFic, String texte,
+			boolean appendMode) {
 		// on va chercher le chemin et le nom du fichier et on me tout ca dans
 		// un String
 		String adressedufichier = System.getProperty("user.dir") + "/" + nomFic;
