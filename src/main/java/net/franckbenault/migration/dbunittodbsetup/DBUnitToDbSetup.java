@@ -26,9 +26,9 @@ public class DBUnitToDbSetup {
 		FileUtils.writeToFile(outputFile, header, true);
 		
 		//read folder list of xml files
-	    String operationHeader = "\tpublic static final Operation %s =\n \tsequenceOf(\n";
-	    String operationDelete = "\tdeleteAllFrom(%s)";
-	    String operationInsertInto = "\tinsertInto(\"%s\")\n";
+	    String operationHeader = "\tpublic static final Operation %s =\n \tOperations.sequenceOf(\n";
+	    String operationDelete = "\tOperations.deleteAllFrom(%s)";
+	    String operationInsertInto = "\tOperations.insertInto(\"%s\")\n";
 	    String operationColumns = "\t.columns(%s)\n";
 	    String operationValues = "\t.values(%s)\n";
 	    String operationBuild = "\t.build()";
@@ -51,7 +51,7 @@ public class DBUnitToDbSetup {
 					List<List<String>> rows = XmlReader.getTableRowValues(tableName, file.getAbsolutePath());
 	
 					for(List<String> row : rows) {
-						String rowString = ListUtils.listToString(row);
+						String rowString = ListUtils.listToStringWithNull(row,columns.size());
 						FileUtils.writeToFile(outputFile,String.format(operationValues,rowString) , true);					
 					}
 					

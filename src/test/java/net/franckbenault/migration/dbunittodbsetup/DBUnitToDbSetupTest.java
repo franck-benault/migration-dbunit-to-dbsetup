@@ -39,5 +39,12 @@ public class DBUnitToDbSetupTest {
 		int res = migration.migration("./src/test/resources/sample-sms-batch", "target/sms-batch.txt");
 		assertTrue(res==0);
 	}
+	
+	@Test
+	public void testMigration_provider() {
+		DBUnitToDbSetup migration = new DBUnitToDbSetup();
+		int res = migration.migration("./src/test/resources/sample-sms-provider", "target/sms-provider.txt");
+		assertTrue(res==0);
+	}
 
 }

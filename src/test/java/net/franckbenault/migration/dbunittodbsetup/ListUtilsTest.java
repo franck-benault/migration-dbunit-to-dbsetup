@@ -41,5 +41,20 @@ public class ListUtilsTest {
 		assertEquals(ListUtils.listToString(list),"\"foo1\",\"foo2\"");
 
 	}
+	
+	@Test
+	public void testListToStringWithNull() {
+		
+		List<String> list = new ArrayList<String>();
+		list.add("foo1");
+		
+		assertEquals(ListUtils.listToStringWithNull(list,1),"\"foo1\"");
+		assertEquals(ListUtils.listToStringWithNull(list,2),"\"foo1\",null");
+
+		list.add("foo2");	
+		assertEquals(ListUtils.listToStringWithNull(list,2),"\"foo1\",\"foo2\"");
+		assertEquals(ListUtils.listToStringWithNull(list,4),"\"foo1\",\"foo2\",null,null");
+
+	}
 
 }
