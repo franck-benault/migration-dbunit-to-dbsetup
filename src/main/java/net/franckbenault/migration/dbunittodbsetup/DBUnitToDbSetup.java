@@ -1,6 +1,7 @@
 package net.franckbenault.migration.dbunittodbsetup;
 
 import java.io.File;
+import java.util.Collections;
 import java.util.List;
 
 import net.franckbenault.migration.dbunittodbsetup.xml.XmlReader;
@@ -38,7 +39,7 @@ public class DBUnitToDbSetup {
 		for(File file : files) {
 			FileUtils.writeToFile(outputFile,String.format(operationHeader,getOperationName(file.getName())), true);
 			List<String> tables = XmlReader.getTablesNames(file.getAbsolutePath());
-			String tablesString = ListUtils.listToString(tables);
+			String tablesString = ListUtils.listToStringReverse(tables);
 			FileUtils.writeToFile(outputFile,String.format(operationDelete,tablesString) , true);
 			
 			for(String tableName: tables) {

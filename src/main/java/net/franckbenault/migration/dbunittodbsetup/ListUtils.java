@@ -1,5 +1,6 @@
 package net.franckbenault.migration.dbunittodbsetup;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ListUtils {
@@ -18,6 +19,15 @@ public class ListUtils {
 		output+="\"";
 		
 		return output;
+	}
+	
+	public static String listToStringReverse(List<String> input) {
+		
+		List<String> reverse = new ArrayList<String>();
+		for (int i = input.size() ; 0 < i ; i--){
+			reverse.add(input.get(i-1));
+		}
+		return listToString(reverse);
 	}
 	
 	public static String listToStringWithNull(List<String> input, int listSize) {
