@@ -79,10 +79,14 @@ public class XmlReader {
 				List<Element> rows = courant.getChildren("row");
 				//System.out.println(columns.size());
 				for(Element row : rows) {
-					List<Element> values = row.getChildren("value");
+					List<Element> values = row.getChildren();
 					List<String> listValues = new ArrayList<String>();
 					for(Element value: values) {
-						listValues.add(value.getValue());
+						if (value.getName().equals("value"))
+							listValues.add(value.getValue());
+						else if(value.getName().equals("null")) {
+							listValues.add("NULL");							
+						}
 					}
 					output.add(listValues);
 				}

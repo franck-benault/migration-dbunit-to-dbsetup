@@ -51,7 +51,7 @@ public class ListUtils {
 		} else
 			output+="\"";
 		
-		
+		output = output.replace("\"NULL\"", "null");
 		
 		return output;
 	}
