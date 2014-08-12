@@ -60,6 +60,7 @@ public class ListUtils {
 			output+="\"";
 		
 		output = output.replace("\"NULL\"", "null");
+		output = output.replace("\"${today-3}\"", "todayMinus3()");
 		
 		return output;
 	}
