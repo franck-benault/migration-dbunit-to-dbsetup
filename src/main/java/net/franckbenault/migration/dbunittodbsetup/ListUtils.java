@@ -30,11 +30,19 @@ public class ListUtils {
 		return listToString(reverse);
 	}
 	
-	public static String listToStringWithNull(List<String> input, int listSize) {
+	public static String listToStringWithNull(List<String> inputl, int listSize) {
 		
 		String output = null;
 		
-		for(String s : input) {
+		List<String> processList = new ArrayList<String>();
+		
+		if(inputl.size()<=listSize)
+			processList.addAll(inputl);
+		else
+			for(int i=0; i<listSize; i++)
+				processList.add(inputl.get(i));
+		
+		for(String s : processList) {
 			if(output==null)
 				output="\"";
 			else
@@ -42,8 +50,8 @@ public class ListUtils {
 			output+=s;
 		}
 		
-		if(input.size()<listSize) {
-			for(int i=0; i<(listSize-input.size());i++)
+		if(processList.size()<listSize) {
+			for(int i=0; i<(listSize-processList.size());i++)
 				if(i==0)
 					output+="\",null";
 				else
