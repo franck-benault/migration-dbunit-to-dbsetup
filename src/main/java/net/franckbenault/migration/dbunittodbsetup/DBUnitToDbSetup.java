@@ -1,7 +1,6 @@
 package net.franckbenault.migration.dbunittodbsetup;
 
 import java.io.File;
-import java.util.Collections;
 import java.util.List;
 
 import net.franckbenault.migration.dbunittodbsetup.xml.XmlReader;
